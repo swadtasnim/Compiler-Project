@@ -1,0 +1,195 @@
+%{#include<stdio.h>
+#include<string.h>
+char head[50][50];
+int i,h=0;
+void Header_Count(char *c)
+{
+	for(i=0;i<h;i++)
+	{if(strcmp(c,head[i])==0)
+        return;
+	}
+     strcpy(head[i],c);
+     h++;
+}
+char key[50][50];
+int k=0;
+
+void Key_Count(char *c)
+{
+for(i=0;i<k;i++)
+	{if(strcmp(c,key[i])==0)
+        return;
+	}
+     strcpy(key[i],c);
+     k++;
+}
+char opt[50][50];
+int o=0;
+
+void Op_Count(char *c)
+{
+for(i=0;i<o;i++)
+	{if(strcmp(c,opt[i])==0)
+        return;
+	}
+     strcpy(opt[i],c);
+     o++;
+}
+
+char ID[50][50];
+int Idf=0;
+
+void Id_Count(char *c)
+{
+for(i=0;i<Idf;i++)
+	{if(strcmp(c,ID[i])==0)
+        return;
+	}
+     strcpy(ID[i],c);
+     Idf++;
+}
+
+char pun[50][50];
+int pn=0;
+
+void Punc_Count(char *c)
+{
+for(i=0;i<pn;i++)
+	{if(strcmp(c,pun[i])==0)
+        return;
+	}
+     strcpy(pun[i],c);
+     pn++;
+}
+
+char fun[50][50];
+int fn=0;
+
+void Fun_Count(char *c)
+{
+for(i=0;i<fn;i++)
+    {if(strcmp(c,fun[i])==0)
+        return;
+    }
+     strcpy(fun[i],c);
+     fn++;
+}
+
+char tp[50][50];
+int ty=0;
+
+void type_Count(char *c)
+{
+for(i=0;i<ty;i++)
+    {if(strcmp(c,tp[i])==0)
+        return;
+    }
+     strcpy(tp[i],c);
+     ty++;
+}
+char sline[50][50];
+int s=0;
+
+void Single_Count(char *c)
+{
+for(i=0;i<s;i++)
+	{if(strcmp(c,sline[i])==0)
+        return;
+	}
+     strcpy(sline[i],c);
+     s++;
+}
+char mline[50][50];
+int m=0;
+
+void Mult_Count(char *c)
+{
+for(i=0;i<m;i++)
+	{if(strcmp(c,mline[i])==0)
+        return;
+	}
+     strcpy(mline[i],c);
+     m++;
+}
+
+int output()
+{
+	for(i=0;i<h;i++)
+		printf("%s\n",head[i]);
+        printf("No. of headers = %d\n\n",h);
+
+        for(i=0;i<k;i++)
+		printf("%s\n",key[i]);
+        printf("No. of keyWords = %d\n\n",k);
+
+        for(i=0;i<o;i++)
+		printf("%s\n",opt[i]);
+        printf("No. of operators = %d\n\n",o);
+
+        for(i=0;i<ty;i++)
+        printf("%s\n",tp[i]);
+        printf("No. of Types = %d\n\n",ty);
+
+		for(i=0;i<Idf;i++)
+		printf("%s\n",ID[i]);
+        printf("No. of identifiers = %d\n\n",Idf);
+
+         for(i=0;i<fn;i++)
+        printf("%s\n",fun[i]);
+        printf("No. of Functions = %d\n\n",fn);
+
+        for(i=0;i<pn;i++)
+		printf("%s\n",pun[i]);
+        printf("No. of punctuationSymbols = %d\n\n",pn);
+
+        for(i=0;i<s;i++)
+		printf("%s\n",sline[i]);
+        printf("No. of singleLineComment = %d\n\n",s);
+
+        for(i=0;i<m;i++)
+		printf("%s\n",mline[i]);
+        printf("No. of multipleLineComment = %d\n\n",m);
+
+		return 0;
+}
+%}
+
+
+
+headerfile  "import<"[a-z]+[.]"file>"
+punctuation  [!@#$%^&*_+={}()><,.;"'?]
+Types      Khali|Purno|Doshomic|Shobdo|Okkhor
+keywords   Jokhon|Nahole|Jotokhon|Shesh|Berhoye
+function     "Typ_def "[A-Z][a-z]+[(][^\n]*[)][:]
+id          "_"[a-z][a-zA-Z0-9]*
+operators  ADD|SUB|MULT|PART|MOD|PW|Shoman|sShomaan|Ebong|Othoba|Noy|Boro|Choto
+digit       [0-9]+
+singleLineComment		[*][*][*][a-zA-Z0-9!@#$%^&(){}_+-,.:\|?>< ]+
+multipleLineComment		[&][&][&][a-zA-Z0-9!@#$*(){}_+-,.:\|?><%\n\t ]*[&][&][&]
+
+
+%%
+{headerfile}    {Header_Count(yytext);}
+{Types}            {type_Count(yytext);}
+{keywords}       {Key_Count(yytext);}
+{punctuation}     {Punc_Count(yytext);}
+{function}        {Fun_Count(yytext);}
+{id}             {Id_Count(yytext);}
+{operators}     {Op_Count(yytext);}
+{singleLineComment}   {Single_Count(yytext);}
+{multipleLineComment}  {Mult_Count(yytext);}
+.                  {}
+{digit}          {}
+%%
+
+int yywrap()
+{
+	return 1;
+}
+
+int main()
+{   freopen("in_file.txt","r",stdin);
+	yylex();
+	freopen("out_file.txt","w",stdout);
+	output();
+}
