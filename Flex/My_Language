@@ -1,3 +1,5 @@
+/*This program will just tokenize a language in source file according to the grammer defined here*/
+
 %{#include<stdio.h>
 #include<string.h>
 char head[50][50];
