@@ -1,0 +1,25 @@
+import<mysource.file>
+import<math.file>
+
+Typ_def Jog():
+Purno _a,_bB,_sSum7,_i,_j;;
+_a shoman 5;;
+_bB shoman 4;;
+***This is a single comment
+***This is my first language
+&&& Here you can
+add anything&&&
+_sSum7 shoman 0;;
+Jotokhon(_i<_j):
+_sSum7 shoman _sSum7 ADD _a  MULT _bB;;
+
+
+Berhoye _sSum7;;
+
+
+
+
+
+
+
+

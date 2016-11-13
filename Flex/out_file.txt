@@ -1,0 +1,40 @@
+import<mysource.file>
+import<math.file>
+No. of headers = 2
+
+Jotokhon
+Berhoye
+No. of keyWords = 2
+
+ADD
+MULT
+No. of operators = 2
+
+Purno
+No. of Types = 1
+
+_a
+_bB
+_sSum7
+_i
+_j
+No. of identifiers = 5
+
+Typ_def Jog():
+No. of Functions = 1
+
+,
+;
+(
+<
+)
+No. of punctuationSymbols = 5
+
+***This is a single comment
+***This my first language
+No. of singleLineComment = 2
+
+&&& Here you can
+add anything&&&
+No. of multipleLineComment = 1
+
