@@ -1,0 +1,74 @@
+import<mysource.file>
+import<math.file>
+
+Typ_def Main():
+Purno aA,bB,sSum7;;
+aA Shoman 20;;
+Likho aA;;
+bB Shoman 100;;
+Likho bB;;
+sSum7 Shoman bB SUB aA;;
+Likho sSum7;;
+Likho aA ADD bB MULT 100;;
+Likho (aA ADD bB) MULT 100;;
+Likho bB SUB aA PART 10;;
+Likho 2 PW 3;;
+Likho 10 MOD 3;;
+Likho 1 Ebong 0;;
+Likho 1 Othoba 0;;
+Likho Noy 1;;
+
+Jokhon(aA theke_Boro bB)
+Likho aA SUB 1;;
+Shesh;;
+
+Jokhon(aA theke_Choto bB)
+Likho 300;;
+Nahole
+Likho 400;;
+Shesh;;
+
+
+Jokhon(1 theke_Choto 0)
+Jokhon(aA theke_Choto bB)
+Likho 300;;
+Nahole
+Likho 400;;
+Shesh;;
+Shesh;;
+
+&&&here all the
+sin,cos,tan,log operation&&&
+
+Likho sin(30);;
+Likho cos(30);;
+Likho tan(30);;
+Likho log(5);;
+
+sS Shoman 20;;
+pP Shoman 1;;
+Likho aA;;
+
+***loop
+Jotokhon(1,5)
+pP;;
+
+***switch case
+Jokhoni(aA):
+Jeimatro 50 Tokhon
+50;;
+Jeimatro 20 Tokhon
+20;;
+Nahole 
+404;;
+
+
+Berhoye
+
+
+
+
+
+
+
+

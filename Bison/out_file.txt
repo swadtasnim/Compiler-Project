@@ -1,0 +1,95 @@
+
+
+
+
+Declaration done!
+Assignation Done!
+The Value is = : 20
+
+Assignation Done!
+The Value is = : 100
+
+Assignation Done!
+The Value is = : 80
+
+The Value is = : 10020
+
+The Value is = : 12000
+
+The Value is = : 98
+
+The Value is = : 8
+
+The Value is = : 1
+
+The Value is = : 0
+
+The Value is = : 1
+
+The Value is = : 0
+
+
+
+The Value is = : 19
+
+We are in Jokhon condition
+
+
+The Value is = : 300
+
+
+The Value is = : 400
+
+We are in Nahole condition
+
+
+
+
+The Value is = : 300
+
+
+The Value is = : 400
+
+We are in Nahole condition
+We are in Jokhon condition
+
+
+
+Result = 0.500000
+Result = 0.866025
+Result = 0.577350
+Result = -1.059153
+
+Assignation Done!
+Assignation Done!
+The Value is = : 20
+
+
+
+
+In loop! 1
+In loop! 2
+In loop! 3
+In loop! 4
+In loop! 5
+
+
+
+
+
+
+
+We are in Jeimatro case: 20 
+
+
+
+
+
+
+
+
+
+
+
+
+
